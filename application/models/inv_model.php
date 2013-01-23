@@ -134,6 +134,20 @@ class Inv_model extends CI_Model {
         return $this->db->get('platform');
     }    
     
+    function get_slot_type_from_port($port_id){
+        $this->db->select('slot_type.slot_type');
+        $this->db->join('sub_slot', 'port.sub_slot_id = sub_slot.sub_slot_id');
+        $this->db->join('slot', 'sub_slot.slot_id = slot.slot_id');
+        $this->db->join('slot_type', 'slot.slot_type_id = slot_type.slot_type_id');
+        $this->db->where('port_id', $port_id);
+        $q = $this->db->get('port');
+        $slot_type = null;
+        if ($q->num_rows() > 0) {
+            $slot_type = $q->$row()->slot_type;
+        }
+        return $slot_type;
+    }
+    
     function get_all_terminating_shelves(){
         //get all shelves for list used in dropdown of circuit (A end & Z end shelves)
         $sql = 'SELECT DISTINCT shelf_id, shelf_name
