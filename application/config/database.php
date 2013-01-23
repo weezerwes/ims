@@ -51,7 +51,7 @@ $db['default']['database'] = 'ci_series';
 */
 
 
-$active_group = 'default';
+$active_group = 'mysql';
 $active_record = TRUE;
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
@@ -84,6 +84,38 @@ $db['inv']['dbcollat'] = 'utf8_general_ci';
 $db['inv']['swap_pre'] = '';
 $db['inv']['autoinit'] = TRUE;
 $db['inv']['stricton'] = FALSE;
+
+$db['mysql']['hostname'] = 'localhost';
+$db['mysql']['username'] = 'root';
+$db['mysql']['password'] = '';
+$db['mysql']['database'] = 'inventory';
+$db['mysql']['dbdriver'] = 'mysql';
+$db['mysql']['dbprefix'] = '';
+$db['mysql']['pconnect'] = FALSE;
+$db['mysql']['db_debug'] = FALSE;
+$db['mysql']['cache_on'] = FALSE;
+$db['mysql']['cachedir'] = '';
+$db['mysql']['char_set'] = 'utf8';
+$db['mysql']['dbcollat'] = 'utf8_general_ci';
+$db['mysql']['swap_pre'] = '';
+$db['mysql']['autoinit'] = TRUE;
+$db['mysql']['stricton'] = FALSE;
+
+$db['school']['hostname'] = 'localhost';
+$db['school']['username'] = 'cct5';
+$db['school']['password'] = 'cct5db2012';
+$db['school']['database'] = 'inventory';
+$db['school']['dbdriver'] = 'mysql';
+$db['school']['dbprefix'] = '';
+$db['school']['pconnect'] = FALSE;
+$db['school']['db_debug'] = FALSE;
+$db['school']['cache_on'] = FALSE;
+$db['school']['cachedir'] = '';
+$db['school']['char_set'] = 'utf8';
+$db['school']['dbcollat'] = 'utf8_general_ci';
+$db['school']['swap_pre'] = '';
+$db['school']['autoinit'] = TRUE;
+$db['school']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

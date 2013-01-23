@@ -1,1 +1,4 @@
-Deny from all
+RewriteEngine on
+RewriteRule ^$ /index.php [L]
+RewriteCond $1 !^(index\.php|images|css|js|video_files|robots\.txt|favicon\.ico)
+RewriteRule ^(.*)$ /index.php/$1 [L] 

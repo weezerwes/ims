@@ -1720,7 +1720,6 @@ class CI_DB_active_record extends CI_DB_driver {
 		// ----------------------------------------------------------------
 
 		// Write the "JOIN" portion of the query
-
 		if (count($this->ar_join) > 0)
 		{
 			$sql .= "\n";

@@ -1,0 +1,216 @@
+<html><head>
+        <title>Inventory View - Peerless Network</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="http://localhost/codeigniter/css/inventory.css" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+        <script src="http://localhost/codeigniter/assets/grocery_crud/themes/flexigrid/js/cookies.js"></script>
+        <script src="http://localhost/codeigniter/assets/grocery_crud/themes/flexigrid/js/jquery.form.js"></script>
+        <script src="http://localhost/codeigniter/assets/grocery_crud/themes/flexigrid/js/jquery.numeric.js"></script>
+        <script src="http://localhost/codeigniter/assets/grocery_crud/themes/flexigrid/js/jquery.printElement.min.js"></script>
+        <script>var current_url = 'http://localhost/codeigniter/inv/menu?type=bay&id=29&current=Bay 1';</script>
+        <script src="<?php echo base_url(); ?>js/jquery.tablesorter.min.js"></script>                
+        <script src="http://localhost/codeigniter/js/script.js"></script>
+    </head><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style>
+
+    <body class=" hasGoogleVoiceExt">
+        <div id="maincontent">
+            <!--import header-->
+            <header>
+                <div id="logo"><a href="http://localhost/codeigniter/"><img src="http://localhost/codeigniter/img/peerless-network-logo.png" alt="Peerless Network"></a></div>
+                <div id="login" class="forms">
+                    <div id="login_container">
+                        <h3>Login</h3>
+                        <div class="form_container" style="display: none; ">
+                            <form action="http://localhost/codeigniter/login/validate_credentials" id="login_form" method="post" accept-charset="utf-8"><label for="username">Username</label><input type="text" name="username" value=""><label for="password">Password</label><input type="password" name="password" value=""><input type="submit" name="submit" value="Login"></form>                    </div>
+                    </div>
+                </div>
+
+                <h1 id="title">Peerless Network Inventory</h1>
+
+                <div id="toprow"></div>
+            </header>
+
+            <!--import breadcrumbs-->
+            <ul id="crumbs">
+
+                <li class="breadcrumb"><a href="http://localhost/codeigniter/inv/menu?type=country&amp;id=1&amp;current=US">US</a></li>
+                <li class="breadcrumb"><a href="http://localhost/codeigniter/inv/menu?type=city&amp;id=16&amp;current=Milwaukee, WI">Milwaukee, WI</a></li>
+                <li class="breadcrumb"><a href="http://localhost/codeigniter/inv/menu?type=building&amp;id=19&amp;current=324 E. Wisconsin Avenue">324 E. Wisconsin Avenue</a></li>
+                <li class="breadcrumb"><a href="http://localhost/codeigniter/inv/menu?type=location&amp;id=22&amp;current=MKE-1">MKE-1</a></li>
+                <li class="breadcrumb"><a href="http://localhost/codeigniter/inv/menu?type=aisle&amp;id=22&amp;current=Aisle 1">Aisle 1</a></li>
+                <li class="current" style="display: list-item; "><a href="http://localhost/codeigniter/inv/menu?type=bay&amp;id=29&amp;current=Bay 1">Bay 1</a></li>
+            </ul>            <div id="menu">
+                <div id="hidden-operations"></div>
+                <div id="report-error" class="report-div error">
+                </div>
+                <div id="report-success" class="report-div success report-list"></div>
+                <h2 class="heading">Shelf</h2>            <hr class="list">
+                <div class="tooltip 46">
+
+                    <p><span class="label">Shelf Name: </span>tio1.mke1</p>
+
+                    <p><span class="label">Chassis Type: </span>Turin Traverse Shelf</p>
+
+                    <p><span class="label">Number Of Slots: </span>20</p>
+
+                    <p><span class="label">Height: </span>11</p>
+
+                    <p><span class="label">Top Rack Unit: </span>32</p>
+
+                    <p><span class="label">Manufacturer: </span>Force10/Dell</p>
+
+                    <p><span class="label">Part Number: </span>TRA-20S-CH-KIT</p>
+
+                    <p><span class="label">Description: </span></p><p>
+                        Traverse 2000 Chassis Kit: Chassis, EAM, Fan Assembly including fans/filter</p>
+                    <p></p>
+
+                    <p><span class="label">Serial Number: </span>SM3810004706</p>
+
+                </div><div class="tooltip 47">
+
+                    <p><span class="label">Shelf Name: </span>cmr1.mke1</p>
+
+                    <p><span class="label">Chassis Type: </span>Cisco 3600 Router</p>
+
+                    <p><span class="label">Number Of Slots: </span>4</p>
+
+                    <p><span class="label">Height: </span>2</p>
+
+                    <p><span class="label">Top Rack Unit: </span>44</p>
+
+                    <p><span class="label">Manufacturer: </span>Cisco</p>
+
+                    <p><span class="label">Part Number: </span>CISCO3640-DC</p>
+
+                    <p><span class="label">Description: </span></p><p>
+                        CISCO 3600 4-SLOT MODULAR ROUTER, 32MB DRAM, 8MB FLASH, DC PWR, 128D 32F</p>
+                    <p></p>
+
+                </div><div class="tooltip 85">
+
+                    <p><span class="label">Shelf Name: </span>cms1.mke1</p>
+
+                    <p><span class="label">Chassis Type: </span>Cisco 2900 Switch</p>
+
+                    <p><span class="label">Number Of Slots: </span>3</p>
+
+                    <p><span class="label">Height: </span>2</p>
+
+                    <p><span class="label">Top Rack Unit: </span>42</p>
+
+                    <p><span class="label">Manufacturer: </span>Cisco</p>
+
+                    <p><span class="label">Part Number: </span>WS-C2924M-XL-EN-DC</p>
+
+                    <p><span class="label">Description: </span></p><p>
+                        CATALYST 2900 24-PORT 10/100 SWITCH WITH 2 MODULE SLOTS, DC POWER, ENTERPRISE EDITION</p>
+                    <p></p>
+
+                    <p><span class="label">Serial Number: </span>CAM0644Z08B</p>
+
+                </div><div class="tooltip 87">
+
+                    <p><span class="label">Shelf Name: </span>bti1.mke1</p>
+
+                    <p><span class="label">Chassis Type: </span>BTI 7060</p>
+
+                    <p><span class="label">Number Of Slots: </span>6</p>
+
+                    <p><span class="label">Height: </span>2</p>
+
+                    <p><span class="label">Top Rack Unit: </span>18</p>
+
+                    <p><span class="label">Manufacturer: </span>BTI</p>
+
+                    <p><span class="label">Part Number: </span>BT7A50AA</p>
+
+                    <p><span class="label">Description: </span></p><p>
+                        7060 Shelf (2U)</p>
+                    <p></p>
+
+                </div><div class="tooltip 86">
+
+                    <p><span class="label">Shelf Name: </span>TURIN-1</p>
+
+                    <p><span class="label">Chassis Type: </span>LCX 144 Panel</p>
+
+                    <p><span class="label">Number Of Slots: </span>1</p>
+
+                    <p><span class="label">Height: </span>4</p>
+
+                    <p><span class="label">Top Rack Unit: </span>38</p>
+
+                    <p><span class="label">Manufacturer: </span>Telect</p>
+
+                    <p><span class="label">Part Number: </span>LCX-P141S</p>
+
+                    <p><span class="label">Description: </span></p><p>
+                        Loaded Fiber Panel 144 Position SC/UPC</p>
+                    <p></p>
+
+                </div><div class="tooltip 88">
+
+                    <p><span class="label">Shelf Name: </span>FAP-1</p>
+
+                    <p><span class="label">Chassis Type: </span>Fuse/Alarm Panel</p>
+
+                    <p><span class="label">Number Of Slots: </span>0</p>
+
+                    <p><span class="label">Height: </span>1</p>
+
+                    <p><span class="label">Top Rack Unit: </span>47</p>
+
+                    <p><span class="label">Manufacturer: </span>Telect</p>
+
+                    <p><span class="label">Part Number: </span>009-8005-3404</p>
+
+                    <p><span class="label">Description: </span></p><p>
+                        FUSE ALARM PNL DUAL FEED 100A PER SIDE 4/4TPA AND 4/4GMT WHT</p>
+                    <p></p>
+
+                </div><table id="currentlist">
+                    <tbody><tr>
+                            <td><a class="list" id="46" href="http://localhost/codeigniter/inv/menu?type=shelf&amp;id=46&amp;current=tio1.mke1">tio1.mke1</a></td>
+                            <td><div class="icon icon-camera shelf-camera"></div><div class="visual-shelf visual46" data-slots="20" style="display: none; "><div class="visual-container"><div class="visual-slot"><a class="list" id="11" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=11&amp;current=5">Slot 5</a><hr><span class="visual-port unused-port">1</span><span class="visual-port unused-port">2</span><span class="visual-port unused-port">3</span><span class="visual-port unused-port">4</span><span class="visual-port unused-port">5</span><span class="visual-port unused-port">6</span><span class="visual-port unused-port">7</span><span class="visual-port unused-port">8</span><span class="visual-port unused-port">9</span><span class="visual-port unused-port">10</span><span class="visual-port unused-port">11</span><span class="visual-port unused-port">12</span><span class="visual-port unused-port">13</span><span class="visual-port unused-port">14</span><span class="visual-port unused-port">15</span><span class="visual-port unused-port">16</span><span class="visual-port unused-port">17</span><span class="visual-port unused-port">18</span><span class="visual-port unused-port">19</span><span class="visual-port unused-port">20</span><span class="visual-port unused-port">21</span><span class="visual-port unused-port">22</span><span class="visual-port unused-port">23</span><span class="visual-port unused-port">24</span></div><div class="visual-slot"><a class="list" id="13" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=13&amp;current=6">Slot 6</a><hr><span class="visual-port unused-port">1</span><span class="visual-port unused-port">2</span><span class="visual-port unused-port">3</span><span class="visual-port unused-port">4</span><span class="visual-port unused-port">5</span><span class="visual-port unused-port">6</span><span class="visual-port unused-port">7</span><span class="visual-port unused-port">8</span><span class="visual-port unused-port">9</span><span class="visual-port unused-port">10</span><span class="visual-port unused-port">11</span><span class="visual-port unused-port">12</span><span class="visual-port unused-port">13</span><span class="visual-port unused-port">14</span><span class="visual-port unused-port">15</span><span class="visual-port unused-port">16</span><span class="visual-port unused-port">17</span><span class="visual-port unused-port">18</span><span class="visual-port unused-port">19</span><span class="visual-port unused-port">20</span><span class="visual-port unused-port">21</span><span class="visual-port unused-port">22</span><span class="visual-port unused-port">23</span><span class="visual-port unused-port">24</span></div><div class="visual-slot"><a class="list" id="6" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=6&amp;current=13">Slot 13</a><hr><span class="visual-port used-port block"><a id="2" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=2&amp;current=1">1</a></span><span class="visual-port used-port block"><a id="4" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=4&amp;current=2">2</a></span><span class="visual-port used-port block"><a id="5" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=5&amp;current=3">3</a></span><span class="visual-port used-port block"><a id="31" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=31&amp;current=4">4</a></span></div><div class="visual-slot"><a class="list" id="14" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=14&amp;current=14">Slot 14</a><hr><span class="visual-port used-port block"><a id="7" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=7&amp;current=1">1</a></span><span class="visual-port used-port block"><a id="8" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=8&amp;current=2">2</a></span><span class="visual-port used-port block"><a id="9" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=9&amp;current=3">3</a></span><span class="visual-port used-port block"><a id="10" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=10&amp;current=4">4</a></span></div><div class="visual-slot"><a class="list" id="15" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=15&amp;current=17">Slot 17</a><hr><span class="visual-port used-port block"><a id="11" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=11&amp;current=1">1</a></span><span class="visual-port used-port block"><a id="12" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=12&amp;current=2">2</a></span></div><div class="visual-slot"><a class="list" id="16" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=16&amp;current=18">Slot 18</a><hr><span class="visual-port used-port block"><a id="13" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=13&amp;current=1">1</a></span><span class="visual-port used-port block"><a id="14" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=14&amp;current=2">2</a></span></div><div class="visual-slot"><a class="list" id="17" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=17&amp;current=19">Slot 19</a><hr><span class="visual-port used-port block"><a id="15" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=15&amp;current=1">1</a></span></div><div class="visual-slot"><a class="list" id="18" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=18&amp;current=20">Slot 20</a><hr><span class="visual-port used-port block"><a id="16" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=16&amp;current=1">1</a></span></div></div><p class="clear">8 slots of 20 available </p></div></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><a class="list" id="47" href="http://localhost/codeigniter/inv/menu?type=shelf&amp;id=47&amp;current=cmr1.mke1">cmr1.mke1</a></td>
+                            <td><div class="icon icon-camera shelf-camera"></div><div class="visual-shelf visual47" data-slots="4" style="display: none; "><div class="visual-container"><div class="visual-slot"><a class="list" id="20" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=20&amp;current=1">Slot 1</a><hr><span class="visual-port unused-port block">1</span><span class="visual-port unused-port block">2</span><span class="visual-port unused-port block">1</span><span class="visual-port unused-port block">2</span></div><div class="visual-slot"><a class="list" id="21" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=21&amp;current=3">Slot 3</a><hr><span class="visual-port unused-port">1</span><span class="visual-port unused-port">2</span><span class="visual-port unused-port">3</span><span class="visual-port unused-port">4</span><span class="visual-port used-port"><a id="35" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=35&amp;current=5">5</a></span><span class="visual-port unused-port">6</span><span class="visual-port unused-port">7</span><span class="visual-port unused-port">8</span><span class="visual-port unused-port">9</span><span class="visual-port unused-port">10</span><span class="visual-port unused-port">11</span><span class="visual-port unused-port">12</span><span class="visual-port unused-port">13</span><span class="visual-port unused-port">14</span><span class="visual-port unused-port">15</span><span class="visual-port unused-port">16</span><span class="visual-port unused-port">17</span><span class="visual-port unused-port">18</span><span class="visual-port unused-port">19</span><span class="visual-port unused-port">20</span><span class="visual-port unused-port">21</span><span class="visual-port unused-port">22</span><span class="visual-port unused-port">23</span><span class="visual-port unused-port">24</span><span class="visual-port unused-port">25</span><span class="visual-port unused-port">26</span><span class="visual-port unused-port">27</span><span class="visual-port unused-port">28</span><span class="visual-port unused-port">29</span><span class="visual-port unused-port">30</span><span class="visual-port unused-port">31</span><span class="visual-port unused-port">32</span></div></div><p class="clear">2 slots of 4 available </p></div></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><a class="list" id="85" href="http://localhost/codeigniter/inv/menu?type=shelf&amp;id=85&amp;current=cms1.mke1">cms1.mke1</a></td>
+                            <td><div class="icon icon-camera shelf-camera"></div><div class="visual-shelf visual85" data-slots="3" style="display: none; "><div class="visual-container"><div class="visual-slot"><a class="list" id="19" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=19&amp;current=1">Slot 1</a><hr><span class="visual-port unused-port">1</span><span class="visual-port unused-port">2</span><span class="visual-port unused-port">3</span><span class="visual-port unused-port">4</span><span class="visual-port unused-port">5</span><span class="visual-port unused-port">6</span><span class="visual-port unused-port">7</span><span class="visual-port unused-port">8</span><span class="visual-port unused-port">9</span><span class="visual-port unused-port">10</span><span class="visual-port unused-port">11</span><span class="visual-port unused-port">12</span><span class="visual-port unused-port">13</span><span class="visual-port unused-port">14</span><span class="visual-port unused-port">15</span><span class="visual-port unused-port">16</span><span class="visual-port unused-port">17</span><span class="visual-port unused-port">18</span><span class="visual-port unused-port">19</span><span class="visual-port unused-port">20</span><span class="visual-port unused-port">21</span><span class="visual-port unused-port">22</span><span class="visual-port unused-port">23</span><span class="visual-port unused-port">24</span></div></div><p class="clear">1 slots of 3 available </p></div></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><a class="list" id="87" href="http://localhost/codeigniter/inv/menu?type=shelf&amp;id=87&amp;current=bti1.mke1">bti1.mke1</a></td>
+                            <td><div class="icon icon-camera shelf-camera"></div><div class="visual-shelf visual87" data-slots="6" style="display: none; "><div class="visual-container"><div class="visual-slot"><a class="list" id="23" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=23&amp;current=1-2">Slot 1-2</a><hr><span class="visual-port unused-port block">1</span><span class="visual-port unused-port block">2</span><span class="visual-port unused-port block">3</span><span class="visual-port unused-port block">4</span><span class="visual-port unused-port block">5</span><span class="visual-port unused-port block">6</span><span class="visual-port unused-port block">7</span><span class="visual-port unused-port block">8</span><span class="visual-port unused-port block">9</span><span class="visual-port unused-port block">10</span><span class="visual-port unused-port block">11</span><span class="visual-port unused-port block">12</span><span class="visual-port unused-port block">1</span><span class="visual-port unused-port block">2</span><span class="visual-port unused-port block">3</span><span class="visual-port unused-port block">4</span><span class="visual-port unused-port block">5</span><span class="visual-port unused-port block">6</span><span class="visual-port unused-port block">7</span><span class="visual-port unused-port block">8</span><span class="visual-port unused-port block">9</span><span class="visual-port unused-port block">10</span><span class="visual-port unused-port block">11</span><span class="visual-port unused-port block">12</span><span class="visual-port unused-port block">1</span><span class="visual-port unused-port block">2</span><span class="visual-port unused-port block">3</span><span class="visual-port unused-port block">4</span><span class="visual-port unused-port block">5</span><span class="visual-port unused-port block">6</span><span class="visual-port unused-port block">7</span><span class="visual-port unused-port block">8</span><span class="visual-port unused-port block">9</span><span class="visual-port unused-port block">10</span><span class="visual-port unused-port block">11</span><span class="visual-port unused-port block">12</span></div><div class="visual-slot"><a class="list" id="22" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=22&amp;current=5">Slot 5</a><hr></div></div><p class="clear">2 slots of 6 available </p></div></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><a class="list" id="86" href="http://localhost/codeigniter/inv/menu?type=shelf&amp;id=86&amp;current=TURIN-1">TURIN-1</a></td>
+                            <td><div class="icon icon-camera shelf-camera"></div><div class="visual-shelf visual86" data-slots="1" style="display: block; "><div class="visual-container"><div class="visual-slot" style="width: 700px; "><a class="list" id="30" href="http://localhost/codeigniter/inv/menu?type=slot&amp;id=30&amp;current=1">Slot 1</a><hr><div style="float: left;"><span class="visual-port used-port block lcx-port"><a id="19" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=19&amp;current=1">1</a></span><span class="visual-port used-port block lcx-port"><a id="19" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=19&amp;current=2">2</a></span><span class="visual-port unused-port block lcx-port">3</span><span class="visual-port unused-port block lcx-port">4</span><span class="visual-port unused-port block lcx-port">5</span><span class="visual-port unused-port block lcx-port">6</span><span class="visual-port unused-port block lcx-port">7</span><span class="visual-port unused-port block lcx-port">8</span><span class="visual-port used-port block lcx-port"><a id="20" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=20&amp;current=9">9</a></span><span class="visual-port used-port block lcx-port"><a id="20" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=20&amp;current=10">10</a></span><span class="visual-port unused-port block lcx-port">11</span><span class="visual-port unused-port block lcx-port">12</span></div><div style="float: left;"><span class="visual-port unused-port block lcx-port">13</span><span class="visual-port unused-port block lcx-port">14</span><span class="visual-port unused-port block lcx-port">15</span><span class="visual-port unused-port block lcx-port">16</span><span class="visual-port unused-port block lcx-port">17</span><span class="visual-port unused-port block lcx-port">18</span><span class="visual-port used-port block lcx-port"><a id="22" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=22&amp;current=19">19</a></span><span class="visual-port used-port block lcx-port"><a id="22" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=22&amp;current=20">20</a></span><span class="visual-port used-port block lcx-port"><a id="23" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=23&amp;current=21">21</a></span><span class="visual-port used-port block lcx-port"><a id="23" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=23&amp;current=22">22</a></span><span class="visual-port unused-port block lcx-port">23</span><span class="visual-port unused-port block lcx-port">24</span></div><span class="visual-port used-port block lcx-port"><a id="24" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=24&amp;current=25">25</a></span><span class="visual-port used-port block lcx-port"><a id="24" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=24&amp;current=26">26</a></span><span class="visual-port used-port block lcx-port"><a id="25" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=25&amp;current=27">27</a></span><span class="visual-port used-port block lcx-port"><a id="25" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=25&amp;current=28">28</a></span><span class="visual-port used-port block lcx-port"><a id="26" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=26&amp;current=29">29</a></span><span class="visual-port used-port block lcx-port"><a id="26" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=26&amp;current=30">30</a></span><span class="visual-port used-port block lcx-port"><a id="27" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=27&amp;current=31">31</a></span><span class="visual-port used-port block lcx-port"><a id="27" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=27&amp;current=32">32</a></span><span class="visual-port used-port block lcx-port"><a id="28" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=28&amp;current=33">33</a></span><span class="visual-port used-port block lcx-port"><a id="28" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=28&amp;current=34">34</a></span><span class="visual-port used-port block lcx-port"><a id="29" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=29&amp;current=35">35</a></span><span class="visual-port used-port block lcx-port"><a id="29" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=29&amp;current=36">36</a></span><span class="visual-port used-port block lcx-port"><a id="30" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=30&amp;current=37">37</a></span><span class="visual-port used-port block lcx-port"><a id="30" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=30&amp;current=38">38</a></span><span class="visual-port used-port block lcx-port"><a id="32" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=32&amp;current=39">39</a></span><span class="visual-port used-port block lcx-port"><a id="32" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=32&amp;current=40">40</a></span><span class="visual-port used-port block lcx-port"><a id="33" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=33&amp;current=41">41</a></span><span class="visual-port used-port block lcx-port"><a id="33" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=33&amp;current=42">42</a></span><span class="visual-port used-port block lcx-port"><a id="34" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=34&amp;current=43">43</a></span><span class="visual-port used-port block lcx-port"><a id="34" href="http://localhost/codeigniter/inv/menu?type=port&amp;id=34&amp;current=44">44</a></span><span class="visual-port unused-port block lcx-port">45</span><span class="visual-port unused-port block lcx-port">46</span><span class="visual-port unused-port block lcx-port">47</span><span class="visual-port unused-port block lcx-port">48</span><span class="visual-port unused-port block lcx-port">49</span><span class="visual-port unused-port block lcx-port">50</span><span class="visual-port unused-port block lcx-port">51</span><span class="visual-port unused-port block lcx-port">52</span><span class="visual-port unused-port block lcx-port">53</span><span class="visual-port unused-port block lcx-port">54</span><span class="visual-port unused-port block lcx-port">55</span><span class="visual-port unused-port block lcx-port">56</span><span class="visual-port unused-port block lcx-port">57</span><span class="visual-port unused-port block lcx-port">58</span><span class="visual-port unused-port block lcx-port">59</span><span class="visual-port unused-port block lcx-port">60</span><span class="visual-port unused-port block lcx-port">61</span><span class="visual-port unused-port block lcx-port">62</span><span class="visual-port unused-port block lcx-port">63</span><span class="visual-port unused-port block lcx-port">64</span><span class="visual-port unused-port block lcx-port">65</span><span class="visual-port unused-port block lcx-port">66</span><span class="visual-port unused-port block lcx-port">67</span><span class="visual-port unused-port block lcx-port">68</span><span class="visual-port unused-port block lcx-port">69</span><span class="visual-port unused-port block lcx-port">70</span><span class="visual-port unused-port block lcx-port">71</span><span class="visual-port unused-port block lcx-port">72</span><span class="visual-port unused-port block lcx-port">73</span><span class="visual-port unused-port block lcx-port">74</span><span class="visual-port unused-port block lcx-port">75</span><span class="visual-port unused-port block lcx-port">76</span><span class="visual-port unused-port block lcx-port">77</span><span class="visual-port unused-port block lcx-port">78</span><span class="visual-port unused-port block lcx-port">79</span><span class="visual-port unused-port block lcx-port">80</span><span class="visual-port unused-port block lcx-port">81</span><span class="visual-port unused-port block lcx-port">82</span><span class="visual-port unused-port block lcx-port">83</span><span class="visual-port unused-port block lcx-port">84</span><span class="visual-port unused-port block lcx-port">85</span><span class="visual-port unused-port block lcx-port">86</span><span class="visual-port unused-port block lcx-port">87</span><span class="visual-port unused-port block lcx-port">88</span><span class="visual-port unused-port block lcx-port">89</span><span class="visual-port unused-port block lcx-port">90</span><span class="visual-port unused-port block lcx-port">91</span><span class="visual-port unused-port block lcx-port">92</span><span class="visual-port unused-port block lcx-port">93</span><span class="visual-port unused-port block lcx-port">94</span><span class="visual-port unused-port block lcx-port">95</span><span class="visual-port unused-port block lcx-port">96</span><span class="visual-port unused-port block lcx-port">97</span><span class="visual-port unused-port block lcx-port">98</span><span class="visual-port unused-port block lcx-port">99</span><span class="visual-port unused-port block lcx-port">100</span><span class="visual-port unused-port block lcx-port">101</span><span class="visual-port unused-port block lcx-port">102</span><span class="visual-port unused-port block lcx-port">103</span><span class="visual-port unused-port block lcx-port">104</span><span class="visual-port unused-port block lcx-port">105</span><span class="visual-port unused-port block lcx-port">106</span><span class="visual-port unused-port block lcx-port">107</span><span class="visual-port unused-port block lcx-port">108</span><span class="visual-port unused-port block lcx-port">109</span><span class="visual-port unused-port block lcx-port">110</span><span class="visual-port unused-port block lcx-port">111</span><span class="visual-port unused-port block lcx-port">112</span><span class="visual-port unused-port block lcx-port">113</span><span class="visual-port unused-port block lcx-port">114</span><span class="visual-port unused-port block lcx-port">115</span><span class="visual-port unused-port block lcx-port">116</span><span class="visual-port unused-port block lcx-port">117</span><span class="visual-port unused-port block lcx-port">118</span><span class="visual-port unused-port block lcx-port">119</span><span class="visual-port unused-port block lcx-port">120</span><span class="visual-port unused-port block lcx-port">121</span><span class="visual-port unused-port block lcx-port">122</span><span class="visual-port unused-port block lcx-port">123</span><span class="visual-port unused-port block lcx-port">124</span><span class="visual-port unused-port block lcx-port">125</span><span class="visual-port unused-port block lcx-port">126</span><span class="visual-port unused-port block lcx-port">127</span><span class="visual-port unused-port block lcx-port">128</span><span class="visual-port unused-port block lcx-port">129</span><span class="visual-port unused-port block lcx-port">130</span><span class="visual-port unused-port block lcx-port">131</span><span class="visual-port unused-port block lcx-port">132</span><span class="visual-port unused-port block lcx-port">133</span><span class="visual-port unused-port block lcx-port">134</span><span class="visual-port unused-port block lcx-port">135</span><span class="visual-port unused-port block lcx-port">136</span><span class="visual-port unused-port block lcx-port">137</span><span class="visual-port unused-port block lcx-port">138</span><span class="visual-port unused-port block lcx-port">139</span><span class="visual-port unused-port block lcx-port">140</span><span class="visual-port unused-port block lcx-port">141</span><span class="visual-port unused-port block lcx-port">142</span><span class="visual-port unused-port block lcx-port">143</span><span class="visual-port unused-port block lcx-port">144</span></div></div><p class="clear">1 slots of 1 available </p></div></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><a class="list" id="88" href="http://localhost/codeigniter/inv/menu?type=shelf&amp;id=88&amp;current=FAP-1">FAP-1</a></td>
+                            <td><div class="icon icon-camera shelf-camera"></div><div class="visual-shelf visual88" data-slots="0" style="display: block; ">No Slots / Ports<p class="clear">0 slots of 0 available </p></div></td>
+
+                        </tr>
+
+                    </tbody></table>
+            </div>
+            <p><a href="http://localhost/codeigniter/">? Start Over</a> | <a href="http://localhost/codeigniter/search">Search</a></p>
+        </div>
+
+
+    </body></html>
